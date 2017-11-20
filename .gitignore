@@ -1,0 +1,4 @@
+
+*.xml
+*.pyc
+weatherapp/weatherapp/settings.py
