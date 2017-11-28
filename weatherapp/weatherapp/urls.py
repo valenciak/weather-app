@@ -18,5 +18,5 @@ from django.contrib import admin
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
-    url(r'^forecast/', include('forecast.urls', namespace='forecast')),
+    url(r'', include('forecast.urls', namespace='forecast')),
 ]

@@ -1,5 +1,5 @@
 from django import forms
-from forecast.models import Location
+from forecast.models import Weather
 
 
 class InputForm(forms.ModelForm):
@@ -11,5 +11,5 @@ class InputForm(forms.ModelForm):
     ))
 
     class Meta:
-        model = Location
+        model = Weather
         fields = ('post',)

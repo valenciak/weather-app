@@ -8,7 +8,7 @@
 
 		<!-- Loading third party fonts -->
 		<link href="http://fonts.googleapis.com/css?family=Roboto:300,400,700|" rel="stylesheet" type="text/css">
-{#		<link href="fonts/font-awesome.min.css" rel="stylesheet" type="text/css">#}
+		<link href="../../static/fonts/font-awesome.min.css" rel="stylesheet" type="text/css">
 
 		<!-- Loading main css file -->
 		<link rel="stylesheet" href="../../static/css/results.css">
@@ -19,10 +19,10 @@
 		<div class="site-content">
 			<div class="site-header">
 				<div class="container">
-					<a href="results.html" class="branding">
+					<a href="" class="branding">
 						<img src="../../static/images/logo.png" alt="" class="logo">
 						<div class="logo-type">
-							<h1 class="site-title">Weather</h1>
+							<h1 class="site-title">SkyCast</h1>
 						</div>
 					</a>
 
@@ -43,105 +43,98 @@
             </div>
 
 
-{#			<div class="hero" data-bg-image="../../static/images/banner.png">#}
-{#				<div class="container">#}
-{#					<form action="#" class="find-location">#}
-{#						<input type="text" placeholder="Find your location...">#}
-{#						<input type="submit" value="Find">#}
-{#					</form>#}
-{##}
-{#				</div>#}
-{#			</div>#}
 			<div class="forecast-table">
 				<div class="container">
 					<div class="forecast-container">
 						<div class="today forecast">
 							<div class="forecast-header">
-								<div class="day">{{ text }}</div>
-								<div class="date">{{ date }}</div>
+								<div class="day">{{ weather.weekdays.one }}</div>
+								<div class="date">{{ weather.date }}</div>
 							</div> <!-- .forecast-header -->
 							<div class="forecast-content">
-								<div class="location">{{ location }}</div>
+								<div class="location">{{ weather.location }}</div>
 								<div class="degree">
-									<div class="num">{{ temp }}<sup>o</sup>F</div>
+									<div class="num">{{ weather.temperature }}<sup>o</sup>F</div>
 									<div class="forecast-icon">
-										<img src="../../static/images/icons/{{ icon }}.svg" alt="" width=90>
+										<img src="../../static/images/icons/{{ weather.icon }}.svg" alt="" width=90>
 									</div>
 								</div>
-								<span><img src="../../static/images/icon-umberella.png" alt="">{{ precipitation }}%</span>
-								<span><img src="../../static/images/icon-wind.png" alt="">{{ wind_speed }} mi/h</span>
+                                <div class="summary">{{ weather.summary }}</div>
+                                <br>
+								<span><img src="../../static/images/icon-umberella.png" alt="">{{ weather.precipitation }}%</span>
+								<span><img src="../../static/images/icon-wind.png" alt="">{{ weather.wind_speed }} mph</span>
 							</div>
 						</div>
 						<div class="forecast">
 							<div class="forecast-header">
-								<div class="day">Tuesday</div>
+								<div class="day">{{ weather.weekdays.two }}</div>
 							</div> <!-- .forecast-header -->
 							<div class="forecast-content">
 								<div class="forecast-icon">
-									<img src="../../static/images/icons/partly-cloudy-day.svg" alt="" width=48>
+									<img src="../../static/images/icons/{{ future.two.icon }}.svg" alt="" width=48>
 								</div>
-								<div class="degree">23<sup>o</sup>C</div>
-								<small>18<sup>o</sup></small>
+								<div class="degree">{{ future.two.high }}<sup>o</sup>F</div>
+								<small>{{ future.two.low }}<sup>o</sup></small>
 							</div>
 						</div>
 						<div class="forecast">
 							<div class="forecast-header">
-								<div class="day">Wednesday</div>
+								<div class="day">{{ weather.weekdays.three }}</div>
 							</div> <!-- .forecast-header -->
 							<div class="forecast-content">
 								<div class="forecast-icon">
-									<img src="../../static/images/icons/cloudy.svg" alt="" width=48>
+									<img src="../../static/images/icons/{{ future.three.icon }}.svg" alt="" width=48>
 								</div>
-								<div class="degree">23<sup>o</sup>C</div>
-								<small>18<sup>o</sup></small>
+								<div class="degree">{{ future.three.high }}<sup>o</sup>F</div>
+								<small>{{ future.three.low }}<sup>o</sup></small>
 							</div>
 						</div>
 						<div class="forecast">
 							<div class="forecast-header">
-								<div class="day">Thursday</div>
+								<div class="day">{{ weather.weekdays.four }}</div>
 							</div> <!-- .forecast-header -->
 							<div class="forecast-content">
 								<div class="forecast-icon">
-									<img src="../../static/images/icons/icon-7.svg" alt="" width=48>
+									<img src="../../static/images/icons/{{ future.four.icon }}.svg" alt="" width=48>
 								</div>
-								<div class="degree">23<sup>o</sup>C</div>
-								<small>18<sup>o</sup></small>
+								<div class="degree">{{ future.four.high }}<sup>o</sup>F</div>
+								<small>{{ future.four.low }}<sup>o</sup></small>
 							</div>
 						</div>
 						<div class="forecast">
 							<div class="forecast-header">
-								<div class="day">Friday</div>
+								<div class="day">{{ weather.weekdays.five }}</div>
 							</div> <!-- .forecast-header -->
 							<div class="forecast-content">
 								<div class="forecast-icon">
-									<img src="../../static/images/icons/icon-12.svg" alt="" width=48>
+									<img src="../../static/images/icons/{{ future.five.icon }}.svg" alt="" width=48>
 								</div>
-								<div class="degree">23<sup>o</sup>C</div>
-								<small>18<sup>o</sup></small>
+								<div class="degree">{{ future.five.high }}<sup>o</sup>F</div>
+								<small>{{ future.five.low }}<sup>o</sup></small>
 							</div>
 						</div>
 						<div class="forecast">
 							<div class="forecast-header">
-								<div class="day">Saturday</div>
+								<div class="day">{{ weather.weekdays.six }}</div>
 							</div> <!-- .forecast-header -->
 							<div class="forecast-content">
 								<div class="forecast-icon">
-									<img src="../../static/images/icons/icon-13.svg" alt="" width=48>
+									<img src="../../static/images/icons/{{ future.six.icon }}.svg" alt="" width=48>
 								</div>
-								<div class="degree">23<sup>o</sup>C</div>
-								<small>18<sup>o</sup></small>
+								<div class="degree">{{ future.six.high }}<sup>o</sup>F</div>
+								<small>{{ future.six.low }}<sup>o</sup></small>
 							</div>
 						</div>
 						<div class="forecast">
 							<div class="forecast-header">
-								<div class="day">Sunday</div>
+								<div class="day">{{ weather.weekdays.seven }}</div>
 							</div> <!-- .forecast-header -->
 							<div class="forecast-content">
 								<div class="forecast-icon">
-									<img src="../../static/images/icons/snow.svg" alt="" width=48>
+									<img src="../../static/images/icons/{{ future.seven.icon }}.svg" alt="" width=48>
 								</div>
-								<div class="degree">23<sup>o</sup>C</div>
-								<small>18<sup>o</sup></small>
+								<div class="degree">{{ future.seven.high }}<sup>o</sup>F</div>
+								<small>{{ future.seven.low }}<sup>o</sup></small>
 							</div>
 						</div>
 					</div>
@@ -160,5 +153,4 @@
 {#		<script src="js/app.js"></script>#}
 
 	</body>
-
 </html>

@@ -1216,8 +1216,8 @@ form textarea {
   .find-location input[type="text"] {
     width: 100%;
     padding: 20px 50px 20px 20px;
-    background: #1e202b;
-    color: white; }
+    background: white;
+    color: black; }
   .find-location input[type="submit"] {
     position: absolute;
     top: 5px;
@@ -1263,7 +1263,7 @@ form textarea {
         text-align: left;
         padding-top: 30px;
         padding-bottom: 30px; }
-      .forecast-container .forecast.today .location {
+      .forecast-container .forecast.today .location .summary {
         font-size: 18px;
         font-size: 1.2857142857em;
         font-weight: 400; }
@@ -1356,56 +1356,6 @@ form textarea {
     appearance: none;
     -webkit-appearance: none;
     color: white; }
-
-.live-camera {
-  margin-bottom: 30px; }
-  .live-camera .live-camera-cover {
-    position: relative;
-    margin-bottom: 20px;
-    cursor: pointer; }
-    .live-camera .live-camera-cover:after {
-      content: " ";
-      width: 45px;
-      height: 45px;
-      position: absolute;
-      left: 0;
-      right: 0;
-      top: 0;
-      bottom: 0;
-      margin: auto;
-      background: url(images/play-button.png); }
-    .live-camera .live-camera-cover img {
-      display: block;
-      width: 100%;
-      height: auto;
-      max-width: 100%;
-      border-radius: 5px; }
-  .live-camera .location {
-    margin-bottom: 5px;
-    color: white;
-    font-weight: 300; }
-
-.news {
-  padding-left: 100px;
-  position: relative; }
-  .news:after {
-    content: " ";
-    width: 12px;
-    height: 7px;
-    background: url(images/arrow.png);
-    display: block; }
-  .news .date {
-    position: absolute;
-    top: 0;
-    left: 0;
-    color: #009ad8;
-    font-size: 24px;
-    font-size: 1.7142857143em; }
-  .news h3 {
-    font-size: 14px;
-    font-size: 1em; }
-    .news h3 a {
-      color: white; }
 
 .arrow-feature {
   list-style-type: none; }
